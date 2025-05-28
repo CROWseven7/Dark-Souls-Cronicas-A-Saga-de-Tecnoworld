@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=MedievalSharp&display=swap');
+
+body {
+    font-family: 'Cinzel', serif;
+    background-color: #0a0806;
+    color: #e0d7c1; /* Alterado para um creme mais claro */
+    background-image: url('https://images.unsplash.com/photo-1518709766631-a6a7ff7b6a57?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+.overlay {
+    background-color: rgba(10, 8, 6, 0.85);
+}
+
+.section-title {
+    font-family: 'MedievalSharp', cursive;
+    color: #f0e6d6; /* Alterado para um branco pálido */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    letter-spacing: 1px;
+}
+
+.content-box {
+    background: linear-gradient(to bottom, #1a1611 0%, #0f0c08 100%);
+    border: 1px solid #3a2e1f;
+    box-shadow: 0 0 15px rgba(210, 130, 50, 0.2);
+    transition: all 0.3s ease;
+}
+
+.content-box:hover {
+    box-shadow: 0 0 25px rgba(210, 130, 50, 0.4);
+    transform: translateY(-5px);
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    border: 2px solid #3a2e1f;
+    box-shadow: 0 0 20px rgba(210, 130, 50, 0.3);
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.bonfire {
+    animation: flicker 3s infinite alternate;
+}
+
+@keyframes flicker {
+    0%, 100% { opacity: 0.8; }
+    25%, 75% { opacity: 1; }
+    50% { opacity: 0.6; }
+}
+
+.nav-link {
+    position: relative;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #d28232;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
